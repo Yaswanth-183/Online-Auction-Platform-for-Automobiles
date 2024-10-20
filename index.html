@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Auction Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Auction Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('auctions')">Auctions</a></li>
+                <li><a href="#" onclick="showSection('login')">Login</a></li>
+                <li><a href="#" onclick="showSection('register')">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to our online auction platform where you can bid on random products!</p>
+        </section>
+
+        <section id="auctions" class="current-auctions">
+            <h2>Current Auctions</h2>
+            <!-- Product 1 -->
+            <div class="product">
+                <h3>Random Product 1</h3>
+                <img src="https://4.bp.blogspot.com/-Ot0QIlkTxYI/VCL3sUfo8YI/AAAAAAAABEA/wDz8Ak0KBmM/s1600/195.jpg" alt="Random Product 1">
+                <p class="product1-current-bid">Current Bid: $50.00</p>
+                <input type="text" id="bid1" placeholder="Enter $51 or more">
+                <button onclick="placeBid(1)">Place Bid</button>
+                <p id="message1"></p>
+                <canvas id="bidHistoryChart1"></canvas>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <h3>Random Product 2</h3>
+                <img src="https://www.kbb.com/wp-content/uploads/2020/01/2011-toyota-camry.jpg?w=1200&h=1&crop=1" alt="Random Product 2">
+                <p class="product2-current-bid">Current Bid: $100.00</p>
+                <input type="text" id="bid2" placeholder="Enter $101 or more">
+                <button onclick="placeBid(2)">Place Bid</button>
+                <p id="message2"></p>
+                <canvas id="bidHistoryChart2"></canvas>
+            </div>
+        </section>
+
+        <section id="login" class="login-form" style="display:none;">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return loginUser(event);">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+        </section>
+
+        <section id="register" class="register-form" style="display:none;">
+            <h2>Register</h2>
+            <form id="registerForm" onsubmit="return registerUser(event);">
+                <input type="text" id="newUsername" placeholder="Username" required>
+                <input type="password" id="newPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <p id="registerMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Auction Platform</p>
+    </footer>
+
+    <!-- Include your custom script.js file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.current-auctions, .login-form, .register-form {
+    padding: 20px;
+    display: none; /* Initially hide all sections */
+}
+
+.product {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 30%;
+    margin: 20px auto; /* Center the product blocks */
+    text-align: center;
+}
+
+.product img {
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+}
+
+input[type="text"], input[type="password"] {
+    margin-top: 10px;
+    padding: 5px;
+    width: calc(100% - 12px);
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Canvas Styling */
+.product canvas {
+    width: 100%; /* Responsive */
+    height: 200px; /* Set a height for the graphs */
+}
